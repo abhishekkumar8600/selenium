@@ -1,0 +1,7 @@
+Feature: log into application
+Scenario: positive login application
+Given initialize the driver
+And access "qaclickacademy"
+And click on login link
+When enter username and pwd
+Then user is verified

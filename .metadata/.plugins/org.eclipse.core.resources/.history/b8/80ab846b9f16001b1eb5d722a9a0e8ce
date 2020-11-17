@@ -1,0 +1,32 @@
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Brokenlinksfindout {
+
+	public static void main(String[] args) throws MalformedURLException {
+		// TODO Auto-generated method stub
+		
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Desktop\\selenium jars\\cd\\chromedriver.exe");
+        
+		WebDriver driver=new ChromeDriver();
+		
+		//broken links identification
+		//step1 to get links tied up to url using selenium
+		//java method calls url and gets u status code
+		//if status code>400 url is broken
+		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+		
+		WebElement footer=driver.findElement(By.xpath("//div[@id='gf-BIG']"));
+		System.out.println(footer.findElements(By.tagName("a")).size());
+		
+		
+		
+		
+
+	}
+
+}

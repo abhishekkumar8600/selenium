@@ -1,0 +1,31 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+public class Calender1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Desktop\\selenium jars\\chromedriver.exe");
+        
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("https://www.spicejet.com/");
+		
+		driver.findElement(By.xpath("//input[@id='ctl00_mainContent_rbtnl_Trip_0']")).click();
+		
+		if(driver.findElement(By.cssSelector("div#Div1")).getAttribute("style").contains("1"))
+		{
+			System.out.println("it is disabled");
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			Assert.assertTrue(false);
+		}
+
+	}
+
+}

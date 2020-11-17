@@ -1,0 +1,38 @@
+package pageObject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class LoginPage {
+
+	public WebDriver driver;
+	
+	By emailid=By.xpath("//input[@id='user_email']");
+	By password=By.cssSelector("input#user_password");
+	By login=By.cssSelector("input.btn.btn-primary.btn-md.login-button");
+	
+	public LoginPage(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+		this.driver=driver;
+	}
+
+	public WebElement getEmaild()
+	{
+		return driver.findElement(emailid);
+		
+	}
+	
+	public WebElement getPassword()
+	{
+		return driver.findElement(password);
+		
+	}
+	
+	public WebElement getLogin()
+	{
+		return driver.findElement(login);
+		
+	}
+	
+}

@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+
+public class Javastreams {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList<String> a=new ArrayList<String>();
+		a.add("fuck");
+		a.add("suck");
+		a.add("luck");
+		a.add("muck");
+		a.add("ouck");
+		a.add("Fuck");
+		
+		
+		int g=0;
+		for(int i=0;i<a.size();i++)
+		{
+			String s=a.get(i);
+			if(s.startsWith("s"))
+			{
+				
+				g++;
+			}
+			
+		
+			
+		}
+		System.out.println(g);
+		
+		//System.out.println(a.stream().filter((s)->s.equalsIgnoreCase("fuck")).count());
+
+	}
+
+}

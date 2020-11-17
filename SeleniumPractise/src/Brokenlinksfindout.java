@@ -1,0 +1,60 @@
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Brokenlinksfindout {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Desktop\\selenium jars\\cd\\chromedriver.exe");
+        
+		WebDriver driver=new ChromeDriver();
+		
+		//broken links identification
+		//step1 to get links tied up to url using selenium
+		//java method calls url and gets u status code
+		//if status code>400 url is broken
+		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+		
+		List<WebElement> links=driver.findElements(By.cssSelector("li.gf-li"));
+		
+		for(int i=0;i<driver.findElements(By.cssSelector("li.gf-li")).size();i++)
+		{
+			String url=links.get(i).getAttribute("href");
+			HttpURLConnection conn=(HttpURLConnection)new URL(url).openConnection();
+			conn.setRequestMethod("HEAD");
+			conn.connect();
+			int respcode=conn.getResponseCode();
+			System.out.println(respcode);
+			if(respcode>400)
+			{
+				System.out.println(links.get(i).getText());
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+
+	}
+
+}

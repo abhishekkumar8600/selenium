@@ -1,0 +1,20 @@
+package pageObject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+
+public class LandingObject {
+	
+	public WebDriver driver;
+	
+	By login=By.xpath("//span[contains(text(),'Login')]");
+	
+	public WebElement getLogin()
+	{
+		return driver.findElement(login);
+	}
+	
+
+}

@@ -1,0 +1,43 @@
+package stepDefinition;
+
+import java.io.IOException;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import resources.Base;
+
+public class StepDefinition extends Base {
+		@Given("initialize the driver")
+		public void initialize_the_driver() throws IOException {
+		    // Write code here that turns the phrase above into concrete actions
+			driver=initializedriver();
+		}
+
+
+	
+
+		@Given("access {string}")
+		public void access(String string) {
+		    // Write code here that turns the phrase above into concrete actions
+		}
+		@Given("move to homepage")
+		public void move_to_homepage() {
+		    // Write code here that turns the phrase above into concrete actions
+		}
+		@Given("click on login link")
+		public void click_on_login_link() {
+		    // Write code here that turns the phrase above into concrete actions
+		}
+		@When("enter username and pwd")
+		public void enter_username_and_pwd() {
+		    // Write code here that turns the phrase above into concrete actions
+		}
+		@Then("user is verified")
+		public void user_is_verified() {
+		    // Write code here that turns the phrase above into concrete actions
+		}
+
+
+
+}

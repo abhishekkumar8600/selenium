@@ -1,0 +1,58 @@
+package academy.RealProject;
+
+import java.io.IOException;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import pageObject.LandingPage;
+import pageObject.LoginPage;
+import resources.Base;
+
+public class HomePage extends Base{
+	
+	@BeforeTest
+	public void initialize() throws IOException
+	{
+		driver=initializedriver();
+		driver.get("http://www.qaclickacademy.com/");
+	}
+
+	@Test(dataProvider="getData")
+	public void basepageNavigation(String username,String password)
+	{
+		driver.get("http://www.qaclickacademy.com/");
+		
+		LandingPage lp=new LandingPage(driver);
+		lp.login().click();
+		
+		LoginPage l=new LoginPage(driver);
+		l.getEmail().sendKeys(username);;
+		l.getPwd().sendKeys(password);;
+		l.getLogin().click();;
+		
+		
+	}
+	@DataProvider
+	public Object[][] getData()
+	{
+		Object[][] data=new Object[2][2];
+		
+		data[0][0]="aaaa";
+		data[0][1]="AAAA";
+		
+		
+		data[1][0]="bbbb";
+		data[1][1]="BBBBB";
+		
+		return data;
+	}
+	
+	@AfterTest
+	public void teminate()
+	{
+		driver.close();
+	}
+}

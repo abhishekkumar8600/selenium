@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="87" started-at="2020-10-28T08:10:24Z" finished-at="2020-10-28T08:10:24Z">
+    <groups>
+    </groups>
+    <test name="Tests" duration-ms="87" started-at="2020-10-28T08:10:24Z" finished-at="2020-10-28T08:10:24Z">
+      <class name="demo.Test3">
+        <test-method status="PASS" signature="testDemo3()[pri:0, instance:demo.Test3@51efea79]" name="testDemo3" is-config="true" duration-ms="23" started-at="2020-10-28T08:10:24Z" finished-at="2020-10-28T08:10:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDemo3 -->
+        <test-method status="PASS" signature="testDemo2()[pri:0, instance:demo.Test3@51efea79]" name="testDemo2" is-config="true" duration-ms="1" started-at="2020-10-28T08:10:24Z" finished-at="2020-10-28T08:10:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDemo2 -->
+        <test-method status="PASS" signature="testDemo22()[pri:0, instance:demo.Test3@51efea79]" name="testDemo22" duration-ms="10" started-at="2020-10-28T08:10:24Z" finished-at="2020-10-28T08:10:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDemo22 -->
+      </class> <!-- demo.Test3 -->
+      <class name="demo.Test4">
+        <test-method status="PASS" signature="testDemo5()[pri:0, instance:demo.Test4@5034c75a]" name="testDemo5" is-config="true" duration-ms="1" started-at="2020-10-28T08:10:24Z" finished-at="2020-10-28T08:10:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDemo5 -->
+        <test-method status="PASS" signature="testDemo6()[pri:0, instance:demo.Test4@5034c75a]" name="testDemo6" is-config="true" duration-ms="1" started-at="2020-10-28T08:10:24Z" finished-at="2020-10-28T08:10:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDemo6 -->
+        <test-method status="PASS" signature="testDemo7()[pri:0, instance:demo.Test4@5034c75a]" name="testDemo7" duration-ms="4" started-at="2020-10-28T08:10:24Z" finished-at="2020-10-28T08:10:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDemo7 -->
+      </class> <!-- demo.Test4 -->
+    </test> <!-- Tests -->
+  </suite> <!-- Suite -->
+</testng-results>

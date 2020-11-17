@@ -1,0 +1,30 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class linkscount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Desktop\\selenium jars\\cd\\chromedriver.exe");
+        
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.navigate().to("https://rahulshettyacademy.com/AutomationPractice/");
+		System.out.println(driver.findElements(By.tagName("a")).size());
+		//limiting webdriver scope to footer section
+		WebElement footerdriver=driver.findElement(By.cssSelector("div#gf-BIG"));
+		System.out.println(footerdriver.findElements(By.tagName("a")).size());
+		
+		//again limiting webdriver scope to specific row of footer section
+		 WebElement footerrow=footerdriver.findElement(By.xpath("//tbody/tr[1]/td[2]/ul[1]"));
+		 System.out.println(footerrow.findElements(By.tagName("a")).size());
+		
+		
+		driver.quit();
+
+	}
+
+}
